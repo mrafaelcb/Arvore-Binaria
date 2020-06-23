@@ -31,4 +31,17 @@ arvBin **iniciaArv() {
     return ptrRaiz;
 }
 
+/**
+ * Função responsável por verificar se à árvore está alocada
+ *
+ * @return true|false
+ */
+bool isAlocada(arvBin **ptrRaiz){
+    if(ptrRaiz==NULL){
+        return false;
+    }else{
+        return true;
+    }
+}
+
 #endif //ARVORE_ARVBIN_H
