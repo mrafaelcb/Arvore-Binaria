@@ -38,6 +38,13 @@ int main() {
                     printf("Árvore não alocada.\n");
                 }
             }
+            case 4:{
+                if(isVazia(ptrRaiz)){
+                    printf("Árvore está vazia.\n");
+                }else{
+                    printf("Árvore não está vazia.\n");
+                }
+            }
         }
     }
 

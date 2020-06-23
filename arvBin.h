@@ -44,4 +44,21 @@ bool isAlocada(arvBin **ptrRaiz){
     }
 }
 
+/**
+ * Função responsável por verificar se à árvore está vazia
+ *
+ * @return true|false
+ */
+bool isVazia(arvBin **ptrRaiz){
+    if(isAlocada(ptrRaiz)){
+        if(*ptrRaiz==NULL){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return true;
+    }
+}
+
 #endif //ARVORE_ARVBIN_H
