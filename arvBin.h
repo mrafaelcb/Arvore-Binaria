@@ -34,12 +34,13 @@ arvBin **iniciaArv() {
 /**
  * Função responsável por verificar se à árvore está alocada
  *
+ * @param **ptrRaiz
  * @return true|false
  */
-bool isAlocada(arvBin **ptrRaiz){
-    if(ptrRaiz==NULL){
+bool isAlocada(arvBin **ptrRaiz) {
+    if (ptrRaiz == NULL) {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
@@ -47,16 +48,68 @@ bool isAlocada(arvBin **ptrRaiz){
 /**
  * Função responsável por verificar se à árvore está vazia
  *
+ * @param **ptrRaiz
  * @return true|false
  */
-bool isVazia(arvBin **ptrRaiz){
-    if(isAlocada(ptrRaiz)){
-        if(*ptrRaiz==NULL){
+bool isVazia(arvBin **ptrRaiz) {
+    if (isAlocada(ptrRaiz)) {
+        if (*ptrRaiz == NULL) {
             return true;
-        }else{
+        } else {
             return false;
         }
-    }else{
+    } else {
+        return true;
+    }
+}
+
+/**
+ * Função responsável por adicionar nó na árvore
+ *
+ * @param **ptrRaiz
+ * @param valor
+ * @return true|false
+ */
+bool adicionarNoArv(arvBin **ptrRaiz, int valor) {
+    arvBin *novoNo = new arvBin;
+
+    if (novoNo == NULL || !isAlocada(ptrRaiz)) {
+        return false;
+    }
+
+    novoNo->chave = valor;
+    novoNo->dir = NULL;
+    novoNo->esq = NULL;
+
+    if (*ptrRaiz == NULL) {
+        *ptrRaiz = novoNo;
+
+    } else {
+        arvBin *atualNo = *ptrRaiz;
+        arvBin *anteriorNo = NULL;
+        while (atualNo != NULL) {
+            anteriorNo = atualNo;
+
+            if (valor == atualNo->chave) {
+                delete novoNo;
+
+                return false;
+            }
+
+            if (valor > atualNo->chave) {
+                atualNo = atualNo->dir;
+            } else {
+                atualNo = atualNo->esq;
+            }
+        }
+
+        if (valor > anteriorNo->chave) {
+            anteriorNo->dir = novoNo;
+
+        } else {
+            anteriorNo->esq = novoNo;
+        }
+
         return true;
     }
 }

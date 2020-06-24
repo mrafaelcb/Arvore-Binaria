@@ -31,20 +31,35 @@ int main() {
                 }
             }
                 break;
-            case 3:{
-                if(isAlocada(ptrRaiz)){
+            case 3: {
+                if (isAlocada(ptrRaiz)) {
                     printf("Árvore Alocada.\n");
-                }else{
+                } else {
                     printf("Árvore não alocada.\n");
                 }
             }
-            case 4:{
-                if(isVazia(ptrRaiz)){
+                break;
+            case 4: {
+                if (isVazia(ptrRaiz)) {
                     printf("Árvore está vazia.\n");
-                }else{
+                } else {
                     printf("Árvore não está vazia.\n");
                 }
             }
+                break;
+            case 5: {
+                int valor;
+
+                printf("Informe valor para o novo nó: ");
+                scanf("%d", &valor);
+
+                if (adicionarNoArv(ptrRaiz, valor)) {
+                    printf("Nó adicionado com sucesso na árvore.\n");
+                } else {
+                    printf("Nó não adicionado na árvore.\n");
+                }
+            }
+                break;
         }
     }
 
