@@ -127,4 +127,27 @@ void imprimirEmOrdem(arvBin *ptrRaiz) {
     }
 }
 
+/**
+ * Função responsável por retornar maior valor da árvore
+ *
+ * @param ptrRaiz
+ * @param numero
+ * @return int
+ */
+int maiorNumeroArv(arvBin *ptrRaiz) {
+    arvBin *aux = new arvBin;
+    aux = ptrRaiz;
+    int numero = 0;
+
+    while (aux != NULL) {
+        if (numero < aux->chave) {
+            numero = aux->chave;
+            aux = aux->dir;
+            if (aux == NULL) {
+                return numero;
+            }
+        }
+    }
+}
+
 #endif //ARVORE_ARVBIN_H

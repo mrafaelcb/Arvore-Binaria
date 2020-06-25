@@ -73,6 +73,18 @@ int main() {
                 }
             }
                 break;
+            case 7: {
+                if (isAlocada(ptrRaiz)) {
+                    if (!isVazia(ptrRaiz)) {
+                        printf("%d\n", maiorNumeroArv(*ptrRaiz));
+                    } else {
+                        printf("Árvore está vazia.\n");
+                    }
+                } else {
+                    printf("Árvore não alocada.\n");
+                }
+            }
+                break;
         }
     }
 
