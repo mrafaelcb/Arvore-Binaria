@@ -150,4 +150,27 @@ int maiorNumeroArv(arvBin *ptrRaiz) {
     }
 }
 
+/**
+ * Função responsável por retornar menor valor da árvore
+ *
+ * @param ptrRaiz
+ * @param numero
+ * @return int
+ */
+int menorNumeroArv(arvBin *ptrRaiz) {
+    arvBin *aux = new arvBin;
+    aux = ptrRaiz;
+    int numero = aux->chave;
+
+    while (aux != NULL) {
+        if (numero > aux->chave) {
+            numero = aux->chave;
+            if (aux->esq == NULL) {
+                return numero;
+            }
+        }
+        aux = aux->esq;
+    }
+}
+
 #endif //ARVORE_ARVBIN_H

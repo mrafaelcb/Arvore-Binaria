@@ -85,6 +85,18 @@ int main() {
                 }
             }
                 break;
+            case 8: {
+                if (isAlocada(ptrRaiz)) {
+                    if (!isVazia(ptrRaiz)) {
+                        printf("%d\n", menorNumeroArv(*ptrRaiz));
+                    } else {
+                        printf("Árvore está vazia.\n");
+                    }
+                } else {
+                    printf("Árvore não alocada.\n");
+                }
+            }
+                break;
         }
     }
 
