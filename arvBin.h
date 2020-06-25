@@ -130,7 +130,7 @@ void imprimirEmOrdem(arvBin *ptrRaiz) {
 /**
  * Função responsável por retornar maior valor da árvore
  *
- * @param ptrRaiz
+ * @param *ptrRaiz
  * @param numero
  * @return int
  */
@@ -153,7 +153,7 @@ int maiorNumeroArv(arvBin *ptrRaiz) {
 /**
  * Função responsável por retornar menor valor da árvore
  *
- * @param ptrRaiz
+ * @param *ptrRaiz
  * @param numero
  * @return int
  */
@@ -170,6 +170,29 @@ int menorNumeroArv(arvBin *ptrRaiz) {
             }
         }
         aux = aux->esq;
+    }
+}
+
+/**
+ * Função responsável por retornar a altura da árvore
+ *
+ * @param ptrRaiz
+ * @return
+ */
+int alturaArv(arvBin *ptrRaiz) {
+    int alturaEsquerda, alturaDireita;
+
+    if (ptrRaiz == NULL) {
+        return 0;
+    }
+
+    alturaEsquerda = alturaArv(ptrRaiz->esq);
+    alturaDireita = alturaArv(ptrRaiz->dir);
+
+    if (alturaEsquerda > alturaDireita) {
+        return alturaEsquerda + 1;
+    } else {
+        return alturaDireita + 1;
     }
 }
 

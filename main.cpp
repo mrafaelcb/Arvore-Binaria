@@ -97,6 +97,18 @@ int main() {
                 }
             }
                 break;
+            case 9: {
+                if (isAlocada(ptrRaiz)) {
+                    if (!isVazia(ptrRaiz)) {
+                        printf("%d\n", alturaArv(*ptrRaiz));
+                    } else {
+                        printf("Árvore está vazia.\n");
+                    }
+                } else {
+                    printf("Árvore não alocada.\n");
+                }
+            }
+                break;
         }
     }
 
