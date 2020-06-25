@@ -6,6 +6,20 @@
 
 using namespace std;
 
+/**
+ * Exemplo:
+ *
+ * Inserção = 4 - 2 - 1 - 3 - 6 - 5 - 7
+ *          4
+ *         / \
+ *       2    6
+ *     /  \  / \
+ *   1    3 5   7
+ *
+ * Menor nó: 1
+ * Maior nó: 7
+ * Altura da árvore: 3
+ */
 int main() {
     setlocale(LC_ALL, "Portuguese");
     arvBin **ptrRaiz;

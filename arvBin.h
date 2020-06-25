@@ -83,7 +83,8 @@ bool adicionarNoArv(arvBin **ptrRaiz, int valor) {
 
     if (*ptrRaiz == NULL) {
         *ptrRaiz = novoNo;
-
+        
+        return true;
     } else {
         arvBin *atualNo = *ptrRaiz;
         arvBin *anteriorNo = NULL;
