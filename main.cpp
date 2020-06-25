@@ -60,6 +60,19 @@ int main() {
                 }
             }
                 break;
+            case 6: {
+                if (isAlocada(ptrRaiz)) {
+                    if (!isVazia(ptrRaiz)) {
+                        imprimirEmOrdem(*ptrRaiz);
+                        printf("\n");
+                    } else {
+                        printf("Árvore está vazia.\n");
+                    }
+                } else {
+                    printf("Árvore não alocada.\n");
+                }
+            }
+                break;
         }
     }
 

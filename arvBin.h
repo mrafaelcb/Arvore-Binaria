@@ -114,4 +114,17 @@ bool adicionarNoArv(arvBin **ptrRaiz, int valor) {
     }
 }
 
+/**
+ * Função responsável por imprimir a árvore em ordem
+ *
+ * @param *ptrRaiz
+ */
+void imprimirEmOrdem(arvBin *ptrRaiz) {
+    if (ptrRaiz != NULL) {
+        imprimirEmOrdem(ptrRaiz->esq);
+        printf(" %d", ptrRaiz->chave);
+        imprimirEmOrdem(ptrRaiz->dir);
+    }
+}
+
 #endif //ARVORE_ARVBIN_H
