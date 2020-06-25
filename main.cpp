@@ -27,7 +27,7 @@ int main() {
                 break;
             case 2: {
                 if (ptrRaiz != NULL) {
-                    printf("Árvore ja inicializada.\n");
+                    printf("Árvore já inicializada.\n");
                 } else {
                     ptrRaiz = iniciaArv();
                     printf("Árvore inicializada com sucesso.\n");

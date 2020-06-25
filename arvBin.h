@@ -197,18 +197,18 @@ int alturaArv(arvBin *ptrRaiz) {
 }
 
 void menu(){
-    printf("\n");
-    printf("0 - Sair.\n");
-    printf("1 - Struct da Árvore.\n");
-    printf("2 - Alocação da árvore.\n");
-    printf("3 - Verificação se a árvore foi alocada.\n");
-    printf("4 - Verificação se a árvore está vazia.\n");
-    printf("5 - Adicionar um novo nó na árvore.\n");
-    printf("6 - Imprimir nós da árvore em ordem.\n");
-    printf("7 - Imprimir nó com maior valor da árvore.\n");
-    printf("8 - Imprimir nó com menor valor da árvore.\n");
-    printf("9 - Imprimir altura da árvore.\n");
-    printf("\n");
+    printf("==============================================\n");
+    printf("\t0 - Sair.\n");
+    printf("\t1 - Struct da Árvore.\n");
+    printf("\t2 - Alocação da árvore.\n");
+    printf("\t3 - Verificação se a árvore foi alocada.\n");
+    printf("\t4 - Verificação se a árvore está vazia.\n");
+    printf("\t5 - Adicionar um novo nó na árvore.\n");
+    printf("\t6 - Imprimir nós da árvore em ordem.\n");
+    printf("\t7 - Imprimir nó com maior valor da árvore.\n");
+    printf("\t8 - Imprimir nó com menor valor da árvore.\n");
+    printf("\t9 - Imprimir altura da árvore.\n");
+    printf("==============================================\n");
 }
 
 #endif //ARVORE_ARVBIN_H
